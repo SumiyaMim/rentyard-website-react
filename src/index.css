@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Fustat:wght@200..800&display=swap');
+@import "tailwindcss";
+
+@layer utilities {
+  .font-fustat {
+    font-family: 'Fustat', sans-serif;
+  }
+
+  .text-black {
+    color: #272B35;
+  }
+
+  .text-primary {
+    color: #316EED;
+  }
+
+  .bg-primary {
+    background-color: #316EED;
+  }
+
+  .border-primary {
+    border-color: #316EED;
+  }
+
+  .border-secondary {
+    border-color: #E0E0E0;
+  }
+
+  .btn-primary {
+    @apply border-2 border-[#E0E0E0] px-5 py-2 font-semibold rounded-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-[#316EED] text-white px-5 py-2 font-semibold rounded-lg;
+  }
+}
