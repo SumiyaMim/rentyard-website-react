@@ -27,10 +27,10 @@
   }
 
   .btn-primary {
-    @apply border-2 border-[#E0E0E0] px-5 py-2 font-semibold rounded-lg;
+    @apply border-2 border-[#E0E0E0] px-5 py-2 font-semibold rounded-lg cursor-pointer;
   }
 
   .btn-secondary {
-    @apply bg-[#316EED] text-white px-5 py-2 font-semibold rounded-lg;
+    @apply bg-[#316EED] text-white px-5 py-2 font-semibold rounded-lg cursor-pointer;
   }
 }

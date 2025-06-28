@@ -21,7 +21,7 @@ const Home = () => {
                 <p className="text-sm font-medium text-[#777980]">Single unit house for single family</p>
             </div>
         </div>
-        <div className="border-[1.6px] border-secondary rounded-xl p-5 flex items-center gap-4 w-full">
+        <div className="border-[1.6px] border-secondary rounded-xl p-5 flex items-center gap-4 w-full cursor-pointer">
             <div className="bg-[#F9FBFF] p-6 rounded-xl">
                 <PiBuildingApartment className="text-3xl"/>
             </div>
@@ -30,7 +30,7 @@ const Home = () => {
                 <p className="text-sm font-medium text-[#777980]">Multiple unit house for families</p>
             </div>
         </div>
-        <div className="border-[1.6px] border-secondary rounded-xl p-5 flex items-center gap-4 w-full">
+        <div className="border-[1.6px] border-secondary rounded-xl p-5 flex items-center gap-4 w-full cursor-pointer">
             <div className="bg-[#F9FBFF] p-6 rounded-xl">
                 <PiBuildingOffice className="text-3xl"/>
             </div>
@@ -44,7 +44,7 @@ const Home = () => {
       {/* select role */}
       <h3 className="text-xl font-bold text-black mt-8 mb-5">Select your role</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="border-[1.6px] border-secondary rounded-xl p-5 flex items-center gap-4 w-full">
+        <div className="border-[1.6px] border-secondary rounded-xl p-5 flex items-center gap-4 w-full cursor-pointer">
             <div className="bg-[#F9FBFF] p-6 rounded-xl">
                 <HiOutlineKey className="text-3xl"/>
             </div>
@@ -53,7 +53,7 @@ const Home = () => {
                 <p className="text-sm font-medium text-[#777980]">Owner of the property</p>
             </div>
         </div>
-        <div className="border-[1.6px] border-secondary rounded-xl p-5 flex items-center gap-4 w-full">
+        <div className="border-[1.6px] border-secondary rounded-xl p-5 flex items-center gap-4 w-full cursor-pointer">
             <div className="bg-[#F9FBFF] p-6 rounded-xl">
                 <LiaUserTieSolid className="text-3xl"/>
             </div>
@@ -62,7 +62,7 @@ const Home = () => {
                 <p className="text-sm font-medium text-[#777980]">Manage property on behalf on owner</p>
             </div>
         </div>
-        <div className="border-[1.6px] border-secondary rounded-xl p-5 flex items-center gap-4 w-full">
+        <div className="border-[1.6px] border-secondary rounded-xl p-5 flex items-center gap-4 w-full cursor-pointer">
             <div className="bg-[#F9FBFF] p-6 rounded-xl">
                 <BiBuildingHouse className="text-3xl"/>
             </div>
