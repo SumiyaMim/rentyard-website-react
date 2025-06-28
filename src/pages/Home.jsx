@@ -1,79 +1,112 @@
-import { PiHouseLine } from "react-icons/pi";
-import { PiBuildingApartment } from "react-icons/pi";
-import { PiBuildingOffice } from "react-icons/pi";
+import React, { useState } from 'react';
+import {
+  PiHouseLine,
+  PiBuildingApartment,
+  PiBuildingOffice
+} from "react-icons/pi";
 import { HiOutlineKey } from "react-icons/hi2";
 import { LiaUserTieSolid } from "react-icons/lia";
 import { BiBuildingHouse } from "react-icons/bi";
 
 const Home = () => {
+  const [selectedProperty, setSelectedProperty] = useState(null);
+  const [selectedRole, setSelectedRole] = useState(null);
+
+  const propertyTypes = [
+    {
+      id: 1,
+      icon: <PiHouseLine className="text-3xl" />,
+      title: 'Single House Property',
+      desc: 'Single unit house for single family',
+    },
+    {
+      id: 2,
+      icon: <PiBuildingApartment className="text-3xl" />,
+      title: 'Apartments complex',
+      desc: 'Multiple unit house for families',
+    },
+    {
+      id: 3,
+      icon: <PiBuildingOffice className="text-3xl" />,
+      title: 'Condominiums',
+      desc: 'Multiple unit house for families',
+    },
+  ];
+
+  const roles = [
+    {
+      id: 1,
+      icon: <HiOutlineKey className="text-3xl" />,
+      title: 'Landlord',
+      desc: 'Owner of the property',
+    },
+    {
+      id: 2,
+      icon: <LiaUserTieSolid className="text-3xl" />,
+      title: 'Realtor',
+      desc: 'Manage property on behalf on owner',
+    },
+    {
+      id: 3,
+      icon: <BiBuildingHouse className="text-3xl" />,
+      title: 'Property management company',
+      desc: 'For management company',
+    },
+  ];
+
   return (
     <div className="px-8 md:px-10 lg:px-14 py-10">
-
-      {/* property type */}
-      <h3 className="text-xl font-bold text-black mb-5">Property type</h3>
+      {/* Property type */}
+      <h3 className="text-xl font-bold text-dark mb-5">Property type</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="border-[1.6px] border-secondary rounded-xl p-5 flex items-center gap-4 w-full cursor-pointer">
-            <div className="bg-[#F9FBFF] p-6 rounded-xl">
-                <PiHouseLine className="text-3xl"/>
+        {propertyTypes.map(property => {
+          const isSelected = selectedProperty === property.id;
+          return (
+            <div
+              key={property.id}
+              onClick={() => setSelectedProperty(property.id)}
+              className={`border-[1.6px] rounded-xl p-5 flex items-center gap-4 w-full cursor-pointer transition-all duration-200 ${
+                isSelected ? 'border-primary bg-[#F9FBFF]' : 'border-secondary bg-white'
+              }`}
+            >
+              <div className="bg-[#F9FBFF] p-6 rounded-xl">
+                {property.icon}
+              </div>
+              <div>
+                <h5 className="text-dark font-semibold mb-1">{property.title}</h5>
+                <p className="text-sm font-medium text-[#777980]">{property.desc}</p>
+              </div>
             </div>
-            <div>
-                <h5 className="font-semibold mb-1">Single House Property</h5>
-                <p className="text-sm font-medium text-[#777980]">Single unit house for single family</p>
-            </div>
-        </div>
-        <div className="border-[1.6px] border-secondary rounded-xl p-5 flex items-center gap-4 w-full cursor-pointer">
-            <div className="bg-[#F9FBFF] p-6 rounded-xl">
-                <PiBuildingApartment className="text-3xl"/>
-            </div>
-            <div>
-                <h5 className="font-semibold mb-1">Apartments complex</h5>
-                <p className="text-sm font-medium text-[#777980]">Multiple unit house for families</p>
-            </div>
-        </div>
-        <div className="border-[1.6px] border-secondary rounded-xl p-5 flex items-center gap-4 w-full cursor-pointer">
-            <div className="bg-[#F9FBFF] p-6 rounded-xl">
-                <PiBuildingOffice className="text-3xl"/>
-            </div>
-            <div>
-                <h5 className="font-semibold mb-1">Condominiums</h5>
-                <p className="text-sm font-medium text-[#777980]">Multiple unit house for families</p>
-            </div>
-        </div>
+          );
+        })}
       </div>
 
-      {/* select role */}
-      <h3 className="text-xl font-bold text-black mt-8 mb-5">Select your role</h3>
+      {/* Select role */}
+      <h3 className="text-xl font-bold text-dark mt-8 mb-5">Select your role</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="border-[1.6px] border-secondary rounded-xl p-5 flex items-center gap-4 w-full cursor-pointer">
-            <div className="bg-[#F9FBFF] p-6 rounded-xl">
-                <HiOutlineKey className="text-3xl"/>
+        {roles.map(role => {
+          const isSelected = selectedRole === role.id;
+          return (
+            <div
+              key={role.id}
+              onClick={() => setSelectedRole(role.id)}
+              className={`border-[1.6px] rounded-xl p-5 flex items-center gap-4 w-full cursor-pointer transition-all duration-200 ${
+                isSelected ? 'border-primary bg-[#F9FBFF]' : 'border-secondary bg-white'
+              }`}
+            >
+              <div className="bg-[#F9FBFF] p-6 rounded-xl">
+                {role.icon}
+              </div>
+              <div>
+                <h5 className="text-dark font-semibold mb-1">{role.title}</h5>
+                <p className="text-sm font-medium text-[#777980]">{role.desc}</p>
+              </div>
             </div>
-            <div>
-                <h5 className="font-semibold mb-1">Landlord</h5>
-                <p className="text-sm font-medium text-[#777980]">Owner of the property</p>
-            </div>
-        </div>
-        <div className="border-[1.6px] border-secondary rounded-xl p-5 flex items-center gap-4 w-full cursor-pointer">
-            <div className="bg-[#F9FBFF] p-6 rounded-xl">
-                <LiaUserTieSolid className="text-3xl"/>
-            </div>
-            <div>
-                <h5 className="font-semibold mb-1">Realtor</h5>
-                <p className="text-sm font-medium text-[#777980]">Manage property on behalf on owner</p>
-            </div>
-        </div>
-        <div className="border-[1.6px] border-secondary rounded-xl p-5 flex items-center gap-4 w-full cursor-pointer">
-            <div className="bg-[#F9FBFF] p-6 rounded-xl">
-                <BiBuildingHouse className="text-3xl"/>
-            </div>
-            <div>
-                <h5 className="font-semibold mb-1">Property management company</h5>
-                <p className="text-sm font-medium text-[#777980]">For management company</p>
-            </div>
-        </div>
+          );
+        })}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
