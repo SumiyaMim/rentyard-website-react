@@ -3,6 +3,7 @@ import { PiHouseLine, PiBuildingApartment, PiBuildingOffice } from "react-icons/
 import { HiOutlineKey } from "react-icons/hi2";
 import { LiaUserTieSolid } from "react-icons/lia";
 import { BiBuildingHouse } from "react-icons/bi";
+import { RxUpload } from "react-icons/rx";
 
 const Home = () => {
 
@@ -102,6 +103,19 @@ const Home = () => {
           );
         })}
       </div>
+
+
+      {selectedProperty && selectedRole === 1 && (
+        <div className="mt-8 p-6 border border-primary rounded-xl bg-[#E0E0E0]">
+            <h4 className="text-dark font-semibold text-lg mb-2">Proof of ownership</h4>
+            <p className="text-sm text-[#555]">Ownership doc*</p>
+            <button>
+                <RxUpload />
+                (Pdf only)
+            </button>
+        </div>
+       )}
+
     </div>
   );
 };
