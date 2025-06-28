@@ -1,33 +1,30 @@
-import React, { useState } from 'react';
-import {
-  PiHouseLine,
-  PiBuildingApartment,
-  PiBuildingOffice
-} from "react-icons/pi";
+import { useState } from 'react';
+import { PiHouseLine, PiBuildingApartment, PiBuildingOffice } from "react-icons/pi";
 import { HiOutlineKey } from "react-icons/hi2";
 import { LiaUserTieSolid } from "react-icons/lia";
 import { BiBuildingHouse } from "react-icons/bi";
 
 const Home = () => {
+
   const [selectedProperty, setSelectedProperty] = useState(null);
   const [selectedRole, setSelectedRole] = useState(null);
 
   const propertyTypes = [
     {
       id: 1,
-      icon: <PiHouseLine className="text-3xl" />,
+      icon: <PiHouseLine/>,
       title: 'Single House Property',
       desc: 'Single unit house for single family',
     },
     {
       id: 2,
-      icon: <PiBuildingApartment className="text-3xl" />,
+      icon: <PiBuildingApartment/>,
       title: 'Apartments complex',
       desc: 'Multiple unit house for families',
     },
     {
       id: 3,
-      icon: <PiBuildingOffice className="text-3xl" />,
+      icon: <PiBuildingOffice/>,
       title: 'Condominiums',
       desc: 'Multiple unit house for families',
     },
@@ -36,19 +33,19 @@ const Home = () => {
   const roles = [
     {
       id: 1,
-      icon: <HiOutlineKey className="text-3xl" />,
+      icon: <HiOutlineKey/>,
       title: 'Landlord',
       desc: 'Owner of the property',
     },
     {
       id: 2,
-      icon: <LiaUserTieSolid className="text-3xl" />,
+      icon: <LiaUserTieSolid/>,
       title: 'Realtor',
       desc: 'Manage property on behalf on owner',
     },
     {
       id: 3,
-      icon: <BiBuildingHouse className="text-3xl" />,
+      icon: <BiBuildingHouse/>,
       title: 'Property management company',
       desc: 'For management company',
     },
@@ -69,7 +66,7 @@ const Home = () => {
                 isSelected ? 'border-primary bg-[#F9FBFF]' : 'border-secondary bg-white'
               }`}
             >
-              <div className="bg-[#F9FBFF] p-6 rounded-xl">
+              <div className="bg-[#F9FBFF] p-6 rounded-xl text-3xl">
                 {property.icon}
               </div>
               <div>
@@ -94,7 +91,7 @@ const Home = () => {
                 isSelected ? 'border-primary bg-[#F9FBFF]' : 'border-secondary bg-white'
               }`}
             >
-              <div className="bg-[#F9FBFF] p-6 rounded-xl">
+              <div className="bg-[#F9FBFF] p-6 rounded-xl text-3xl">
                 {role.icon}
               </div>
               <div>
