@@ -142,7 +142,7 @@ const Home = () => {
                 <h4 className="bg-[#f0f0f0] text-[#6F6C6A] font-medium text-lg mb-0 px-6 py-3">
                     Realtor verification
                 </h4>
-                <div className="bg-white px-6 py-4 grid grid-cols-1 md:grid-cols-3 gap-5">
+                <div className="bg-white px-6 py-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                     <div>
                         <p className="text-dark mb-2 font-semibold">Lenience number*</p>
                         <input
