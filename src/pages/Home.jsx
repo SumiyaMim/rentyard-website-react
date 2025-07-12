@@ -365,7 +365,13 @@ const Home = () => {
             backText="Back"
             buttonText="Get Started"
             disabled={!(selectedProperty && selectedRole)}
-            onClick={() => navigate('/information')}
+            onClick={() =>
+                navigate('/information', {
+                state: {
+                    propertyTitle: propertyTypes.find(p => p.id === selectedProperty)?.title,
+                },
+                })
+            }        
         />
     </div>
   );
