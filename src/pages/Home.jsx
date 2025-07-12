@@ -362,6 +362,7 @@ const Home = () => {
         <Footer
             backText="Back"
             buttonText="Get Started"
+            disabled={!(selectedProperty && selectedRole)}
         />
     </div>
   );
