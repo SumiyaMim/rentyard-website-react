@@ -6,12 +6,14 @@ import { BiBuildingHouse } from "react-icons/bi";
 import { RxUpload } from "react-icons/rx";
 import { IoIosArrowDown } from "react-icons/io";
 import Footer from '../components/Footer';
+import { useNavigate  } from 'react-router-dom';
 
 const Home = () => {
 
   const [selectedProperty, setSelectedProperty] = useState(null);
   const [selectedRole, setSelectedRole] = useState(null);
   const [selectedCountryCode, setSelectedCountryCode] = useState("+880");
+  const navigate = useNavigate();
 
   const propertyTypes = [
     {
@@ -363,6 +365,7 @@ const Home = () => {
             backText="Back"
             buttonText="Get Started"
             disabled={!(selectedProperty && selectedRole)}
+            onClick={() => navigate('/information')}
         />
     </div>
   );
