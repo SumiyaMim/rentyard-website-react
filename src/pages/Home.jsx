@@ -25,7 +25,7 @@ const Home = () => {
     {
       id: 2,
       icon: <PiBuildingApartment/>,
-      title: 'Apartments complex',
+      title: 'Apartments Complex',
       desc: 'Multiple unit house for families',
     },
     {
@@ -52,7 +52,7 @@ const Home = () => {
     {
       id: 3,
       icon: <BiBuildingHouse/>,
-      title: 'Property management company',
+      title: 'Property Management Company',
       desc: 'For management company',
     },
   ];
