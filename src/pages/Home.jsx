@@ -73,13 +73,13 @@ const Home = () => {
                         isSelected ? 'border-primary bg-[#F9FBFF]' : 'border-secondary bg-white'
                     }`}
                     >
-                    <div className="bg-[#F9FBFF] p-6 rounded-xl text-3xl">
-                        {property.icon}
-                    </div>
-                    <div>
-                        <h5 className="text-dark font-semibold mb-1">{property.title}</h5>
-                        <p className="text-sm font-medium text-[#777980]">{property.desc}</p>
-                    </div>
+                        <div className="bg-[#F9FBFF] p-6 rounded-xl text-3xl">
+                            {property.icon}
+                        </div>
+                        <div>
+                            <h5 className="text-dark font-semibold mb-1">{property.title}</h5>
+                            <p className="text-sm font-medium text-[#777980]">{property.desc}</p>
+                        </div>
                     </div>
                 );
                 })}
@@ -98,13 +98,13 @@ const Home = () => {
                         isSelected ? 'border-primary bg-[#F9FBFF]' : 'border-secondary bg-white'
                     }`}
                     >
-                    <div className="bg-[#F9FBFF] p-6 rounded-xl text-3xl">
-                        {role.icon}
-                    </div>
-                    <div>
-                        <h5 className="text-dark font-semibold mb-1">{role.title}</h5>
-                        <p className="text-sm font-medium text-[#777980]">{role.desc}</p>
-                    </div>
+                        <div className="bg-[#F9FBFF] p-6 rounded-xl text-3xl">
+                            {role.icon}
+                        </div>
+                        <div>
+                            <h5 className="text-dark font-semibold mb-1">{role.title}</h5>
+                            <p className="text-sm font-medium text-[#777980]">{role.desc}</p>
+                        </div>
                     </div>
                 );
                 })}
@@ -120,8 +120,8 @@ const Home = () => {
                         <div className="bg-white px-6 py-4">
                             <p className="text-dark mb-2 font-semibold">Ownership doc*</p>
                             <button className="flex items-center justify-center gap-3 bg-[#f0f0f0] border-[1.6px] border-secondary border-dashed rounded-md px-4 py-3 text-[#6F6C6A] text-sm font-semibold w-full lg:w-2/6">
-                            <RxUpload className='text-lg text-dark'/>
-                            <span>(Pdf only)</span>
+                                <RxUpload className='text-lg text-dark'/>
+                                <span>(Pdf only)</span>
                             </button>
                         </div>
                     </div>
@@ -157,15 +157,15 @@ const Home = () => {
                             <div>
                                 <p className="text-dark mb-2 font-semibold">Additional documents for realtor</p>
                                 <button className="flex items-center justify-center gap-3 bg-[#f0f0f0] border-[1.6px] border-secondary border-dashed rounded-md px-4 py-3 text-[#6F6C6A] text-sm font-semibold w-full">
-                                <RxUpload className='text-lg text-dark'/>
-                                <span>(Pdf only)</span>
+                                    <RxUpload className='text-lg text-dark'/>
+                                    <span>(Pdf only)</span>
                                 </button>
                             </div>
                             <div>
                                 <p className="text-dark mb-2 font-semibold">Agreement with landlord*</p>
                                 <button className="flex items-center justify-center gap-3 bg-[#f0f0f0] border-[1.6px] border-secondary border-dashed rounded-md px-4 py-3 text-[#6F6C6A] text-sm font-semibold w-full">
-                                <RxUpload className='text-lg text-dark'/>
-                                <span>(Pdf only)</span>
+                                    <RxUpload className='text-lg text-dark'/>
+                                    <span>(Pdf only)</span>
                                 </button>
                             </div>
                         </div>
@@ -218,8 +218,8 @@ const Home = () => {
                             <div>
                                 <p className="text-dark mb-2 font-semibold">Agreement with landlord/owner* </p>
                                 <button className="flex items-center justify-center gap-3 bg-[#f0f0f0] border-[1.6px] border-secondary border-dashed rounded-md px-4 py-3 text-[#6F6C6A] text-sm font-semibold w-full">
-                                <RxUpload className='text-lg text-dark'/>
-                                <span>(Pdf only)</span>
+                                    <RxUpload className='text-lg text-dark'/>
+                                    <span>(Pdf only)</span>
                                 </button>
                             </div>
                             <div className="relative">
